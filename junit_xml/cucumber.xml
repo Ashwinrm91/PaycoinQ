@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="6.177376">
+    <testcase classname="Testing API for creation, updation, deletion of users" name="Creating users" time="3.418329">
+        <system-out><![CDATA[Given Creating users using details..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Testing API for creation, updation, deletion of users" name="Getting the list of users" time="0.58753">
+        <system-out><![CDATA[Given Displaying the list of users..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Testing API for creation, updation, deletion of users" name="Updating the user details" time="0.541755">
+        <system-out><![CDATA[Given User updates the username and email...................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Testing API for creation, updation, deletion of users" name="Duplicate user(Negative scenario)" time="1.110897">
+        <system-out><![CDATA[Given User trying to create same user.......................................passed
+Given Creating the user with password less than 8 letters...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Testing API for creation, updation, deletion of users" name="Deleting the user" time="0.518865">
+        <system-out><![CDATA[Given Deletion of user......................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
