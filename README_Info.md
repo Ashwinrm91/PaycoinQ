@@ -2,6 +2,8 @@
 
 Cucumber BDD Framework --- Restappured API Automation
 
+Java version: 1.8 Maven version:  .6.3
+
 Why this framework and Features of Framework:
 
 The framework is created in such a way where each line in the feature file is mapped to the Java and rest api methods.
