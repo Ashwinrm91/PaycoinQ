@@ -57,3 +57,6 @@ Pros - Easy to get the data with all the API methods in a fraction of seconds.
 Cons - I don't find any cons
 
 ****************************************
+
+
+Note: I did the validation for Post and the same can be extended to others as well
