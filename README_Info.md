@@ -22,7 +22,7 @@ Runner package
 Src/main/java - Where the runner class is stored we can give the tags and path of the feature file which we want to run
 
 Step Def Package
-Src/main/java - Where the API methods written for the Http methods and Generic methods for code resuabilty
+Src/main/java - Where the API methods written for the Post,Get,Patch and Delete methods and HTTP methods for code resuabilty
 
 Utils
 
