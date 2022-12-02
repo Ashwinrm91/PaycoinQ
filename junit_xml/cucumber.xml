@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="6.177376">
-    <testcase classname="Testing API for creation, updation, deletion of users" name="Creating users" time="3.418329">
-        <system-out><![CDATA[Given Creating users using details..........................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="16.080374">
+    <testcase classname="Testing API for Booking Creation, Getting details, updation and deletion" name="Creates a new booking in the API" time="5.47773">
+        <system-out><![CDATA[Given Creating booking using user details...................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Testing API for creation, updation, deletion of users" name="Getting the list of users" time="0.58753">
-        <system-out><![CDATA[Given Displaying the list of users..........................................passed
+    <testcase classname="Testing API for Booking Creation, Getting details, updation and deletion" name="Returns a specific booking based upon the booking id provided" time="1.766837">
+        <system-out><![CDATA[Given User get the created details..........................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Testing API for creation, updation, deletion of users" name="Updating the user details" time="0.541755">
-        <system-out><![CDATA[Given User updates the username and email...................................passed
+    <testcase classname="Testing API for Booking Creation, Getting details, updation and deletion" name="Returns the ids of all the bookings that exist within the API. Can take optional query strings to search and return a subset of booking ids." time="5.112659">
+        <system-out><![CDATA[Given User gets the all the booking Ids.....................................passed
+Then I am getting the booking IDs with firstname "Ashwin" and the secondname "RM".passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Testing API for creation, updation, deletion of users" name="Duplicate user(Negative scenario)" time="1.110897">
-        <system-out><![CDATA[Given User trying to create same user.......................................passed
-Given Creating the user with password less than 8 letters...................passed
+    <testcase classname="Testing API for Booking Creation, Getting details, updation and deletion" name="Updates a current booking with a partial payload" time="2.075989">
+        <system-out><![CDATA[Given User updates the booking details with partial information with firstname and Lastname.passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Testing API for creation, updation, deletion of users" name="Deleting the user" time="0.518865">
-        <system-out><![CDATA[Given Deletion of user......................................................passed
+    <testcase classname="Testing API for Booking Creation, Getting details, updation and deletion" name="Deletes a current booking with bookingid" time="1.647159">
+        <system-out><![CDATA[Given user deletes the content using bookingID..............................passed
 ]]></system-out>
     </testcase>
 </testsuite>

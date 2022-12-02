@@ -1,14 +1,14 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Unzer_API.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Restful_Booker.feature");
 formatter.feature({
   "line": 2,
-  "name": "Testing API for creation, updation, deletion of users",
+  "name": "Testing API for Booking Creation, Getting details, updation and deletion",
   "description": "",
-  "id": "testing-api-for-creation,-updation,-deletion-of-users",
+  "id": "testing-api-for-booking-creation,-getting-details,-updation-and-deletion",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@User_API"
+      "name": "@Booking_API"
     }
   ]
 });
@@ -20,28 +20,28 @@ formatter.scenario({
     }
   ],
   "line": 6,
-  "name": "Creating users",
+  "name": "Creates a new booking in the API",
   "description": "",
-  "id": "testing-api-for-creation,-updation,-deletion-of-users;creating-users",
+  "id": "testing-api-for-booking-creation,-getting-details,-updation-and-deletion;creates-a-new-booking-in-the-api",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
       "line": 5,
-      "name": "@Create_User"
+      "name": "@Create_Booking"
     }
   ]
 });
 formatter.step({
   "line": 7,
-  "name": "Creating users using details",
+  "name": "Creating booking using user details",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ApiMethods.PostRequest()"
+  "location": "ApiMethods.createUser()"
 });
 formatter.result({
-  "duration": 3418328600,
+  "duration": 4260468600,
   "status": "passed"
 });
 formatter.scenario({
@@ -52,28 +52,28 @@ formatter.scenario({
     }
   ],
   "line": 11,
-  "name": "Getting the list of users",
+  "name": "Returns a specific booking based upon the booking id provided",
   "description": "",
-  "id": "testing-api-for-creation,-updation,-deletion-of-users;getting-the-list-of-users",
+  "id": "testing-api-for-booking-creation,-getting-details,-updation-and-deletion;returns-a-specific-booking-based-upon-the-booking-id-provided",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
       "line": 10,
-      "name": "@List_User"
+      "name": "@GetBooking"
     }
   ]
 });
 formatter.step({
   "line": 12,
-  "name": "Displaying the list of users",
+  "name": "User gets the created details",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ApiMethods.GetRequest()"
+  "location": "ApiMethods.Gets_particular_user_with_Bookingid()"
 });
 formatter.result({
-  "duration": 587529500,
+  "duration": 1230197600,
   "status": "passed"
 });
 formatter.scenario({
@@ -84,92 +84,114 @@ formatter.scenario({
     }
   ],
   "line": 16,
-  "name": "Updating the user details",
+  "name": "Returns the ids of all the bookings that exist within the API. Can take optional query strings to search and return a subset of booking ids.",
   "description": "",
-  "id": "testing-api-for-creation,-updation,-deletion-of-users;updating-the-user-details",
+  "id": "testing-api-for-booking-creation,-getting-details,-updation-and-deletion;returns-the-ids-of-all-the-bookings-that-exist-within-the-api.-can-take-optional-query-strings-to-search-and-return-a-subset-of-booking-ids.",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
       "line": 15,
-      "name": "@update"
+      "name": "@GetBookingIds"
     }
   ]
 });
 formatter.step({
   "line": 17,
-  "name": "User updates the username and email",
+  "name": "User gets the all the booking Ids",
   "keyword": "Given "
 });
+formatter.step({
+  "line": 18,
+  "name": "I am getting the booking IDs with firstname \"Ash\" and the secondname \"RM\"",
+  "keyword": "Then "
+});
 formatter.match({
-  "location": "ApiMethods.PutRequest()"
+  "location": "ApiMethods.gets_all_User()"
 });
 formatter.result({
-  "duration": 541755100,
+  "duration": 3127570400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Ash",
+      "offset": 45
+    },
+    {
+      "val": "RM",
+      "offset": 70
+    }
+  ],
+  "location": "ApiMethods.filtering_the_user(String,String)"
+});
+formatter.result({
+  "duration": 1238596400,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 20,
-  "name": "Duplicate user(Negative scenario)",
+  "comments": [
+    {
+      "line": 20,
+      "value": "#Test case 4"
+    }
+  ],
+  "line": 22,
+  "name": "Updates a current booking with a partial payload",
   "description": "",
-  "id": "testing-api-for-creation,-updation,-deletion-of-users;duplicate-user(negative-scenario)",
+  "id": "testing-api-for-booking-creation,-getting-details,-updation-and-deletion;updates-a-current-booking-with-a-partial-payload",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 19,
-      "name": "@duplicate"
+      "line": 21,
+      "name": "@PartialUpdateBooking"
     }
   ]
 });
 formatter.step({
-  "line": 21,
-  "name": "User trying to create same user",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 22,
-  "name": "Creating the user with password less than 8 letters",
+  "line": 23,
+  "name": "User updates the booking details with partial information with firstname and Lastname",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ApiMethods.negativeScenario()"
+  "location": "ApiMethods.partially_updates_the_User_data()"
 });
 formatter.result({
-  "duration": 590009100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ApiMethods.negativeScenario1()"
-});
-formatter.result({
-  "duration": 520887500,
+  "duration": 1250219400,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 26,
-  "name": "Deleting the user",
-  "description": "",
-  "id": "testing-api-for-creation,-updation,-deletion-of-users;deleting-the-user",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
+  "comments": [
     {
       "line": 25,
-      "name": "@Delete_User"
+      "value": "#Test case 5"
+    }
+  ],
+  "line": 27,
+  "name": "Deletes a current booking with bookingid",
+  "description": "",
+  "id": "testing-api-for-booking-creation,-getting-details,-updation-and-deletion;deletes-a-current-booking-with-bookingid",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 26,
+      "name": "@DeleteBooking"
     }
   ]
 });
 formatter.step({
-  "line": 27,
-  "name": "Deletion of user",
+  "line": 28,
+  "name": "user deletes the content using bookingID",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ApiMethods.DeleteRequest()"
+  "location": "ApiMethods.deleting_the_User_data()"
 });
 formatter.result({
-  "duration": 518865200,
+  "duration": 1198848500,
   "status": "passed"
 });
 });

@@ -10,7 +10,8 @@ public class TestUtils {
 		FileInputStream fis = null;
 		Properties prop = null;
 		try {
-			fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\Properties\\M3o.properties");
+			fis = new FileInputStream(
+					System.getProperty("user.dir") + "\\src\\main\\Properties\\Booking_Details.properties");
 			prop = new Properties();
 			prop.load(fis);
 		} catch (FileNotFoundException fnfe) {
